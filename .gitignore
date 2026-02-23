@@ -1,0 +1,5 @@
+*.txt
+*.log
+!requirements.txt
+!backend/requirements.txt
+!backend/runtime.txt
