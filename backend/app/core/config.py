@@ -1,11 +1,7 @@
 import os
 from pydantic_settings import BaseSettings
 
-class Settings(BaseSettings):
-    PROJECT_NAME: str = "Trinetra Mini - Creator Intelligence Engine"
-    API_V1_STR: str = "/api/v1"
-    
-db_url = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/trinetra")
+db_url = os.getenv("DATABASE_URL", "sqlite:///./trinetra.db")
 if db_url and db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
 
